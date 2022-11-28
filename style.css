@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url(janko-ferlic-sfL_QOnmy00-unsplash.jpg);
+    background-size: cover;
+}
+#add-book-container{
+    display: flex;
+    border:solid 2px #fff;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input-book{
+    border-radius: 5px;
+    font-size: 20px;
+    width: 300px;
+    margin: 5px;
+}
+#add-book{
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 70px;
+    background-color: #fff;
+    border-color: rgb(8, 209, 8);
+    color: rgb(8, 209, 8);
+    
+}
+#add-book:hover{
+    background-color: rgb(13, 174, 13);
+    color: #fff;
+}
+.book{
+    width:95%;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.book li{
+    list-style: none;
+    padding: 10px;
+    margin:5px;
+    font-size: 1.3rem;
+    flex: 4;
+}
+.book button{
+    flex: 1;
+    border-radius: 10px;
+    margin:5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.book .checkBook{
+    color: orange;
+    border: solid 2px orange;
+
+}
+.book .checkBook:hover{
+    color: white;
+    background-color: orange;
+}
+.book .deleteBook{
+    color: red;
+    border: solid 2px red;
+
+}
+.book .deleteBook:hover{
+    color: white;
+    background-color: red;
+}
