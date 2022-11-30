@@ -9,9 +9,8 @@
   font-family: "Ambery";
   list-style: none;
   /* overflow-y: hidden; */
-  
 }
-body{
+body {
   position: relative;
 }
 
@@ -27,7 +26,7 @@ body{
   box-sizing: border-box;
   background-image: linear-gradient(to bottom right, #ed4264, #ffedbc);
 }
-.sidebar .sidebar-contents{
+.sidebar .sidebar-contents {
   margin-top: 100px;
 }
 .sidebar .header {
@@ -54,8 +53,8 @@ body{
   display: flex;
   justify-content: center;
 }
-#add-book,
-#read-book {
+.add-book,
+.read-book {
   background-color: #9fff9c;
   border-radius: 10px;
   font-size: 15px;
@@ -64,27 +63,27 @@ body{
   width: 200px;
   border: none;
 }
-#read-book:hover {
+.read-book:hover {
   background-color: rgb(142, 213, 142);
   color: #fff;
 }
-#add-book:hover {
+.add-book:hover {
   background-color: rgb(142, 213, 142);
   color: #fff;
 }
 
 /* main contents */
 
-#book-container{
-  background-color:#ed4264;
+.book-container {
+  background-color: #ed4264;
   height: 100vh;
   display: flex;
   flex-wrap: row wrap;
   margin-left: 270px;
   padding: 100px;
 }
-#book-container div {
-  width:100%;
+.book-container div {
+  width: 100%;
   height: 10%;
   display: flex;
   justify-content: center;
@@ -93,12 +92,12 @@ body{
 
 /* book class created in js file*/
 
-.book{
+.book {
   background-color: white;
   border-radius: 10px;
   width: 200px;
   height: 200px;
- 
+
   font-size: 1rem;
   box-sizing: border-box;
 }

@@ -1,8 +1,7 @@
 const addBook = document.getElementById("add-book");
-const bookContainer = document.getElementById("book-container");
+const bookContainer = document.getElementsByClassName("book-container");
 const inputBook = document.getElementsByClassName("input-book");
 const readBook = document.getElementById("read-book");
-
 
 addBook.addEventListener("click", function () {
   let book = document.createElement("div");
@@ -10,27 +9,26 @@ addBook.addEventListener("click", function () {
   let ul = document.createElement("ul");
   for (let i = 0; i < inputBook.length; i++) {
     let li = document.createElement("li");
-    li.innerText = "Book Name :"+`${inputBook[0].value}`;
+    li.innerText = "Book Name :" + `${inputBook[0].value}`;
     ul.appendChild(li);
-    li.innerText = "Auther Name:"+`${inputBook[1].value}`;
+    li.innerText = "Auther Name:" + `${inputBook[1].value}`;
     ul.appendChild(li);
-    li.innerText = "Number of Pages :"+`${inputBook[2].value}`;
+    li.innerText = "Number of Pages :" + `${inputBook[2].value}`;
     ul.appendChild(li);
   }
   book.appendChild(ul);
 
-  let buttons =document.createElement("div");
+  let buttons = document.createElement("div");
   buttons.classList.add("button-js-container");
-  
+
   let status = document.createElement("button");
   status.classList.add("status");
   status.innerText = "Not Read";
- 
 
   let deleteButton = document.createElement("button");
   deleteButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
   deleteButton.classList.add("deleteBook");
-  
+
   buttons.appendChild(status);
   buttons.appendChild(deleteButton);
 
@@ -48,16 +46,16 @@ addBook.addEventListener("click", function () {
   inputBook[1].value = "";
   inputBook[2].value = "";
 
-    status.addEventListener("click", function () {
-        status.innerText="Not Read";
-    });
+  status.addEventListener("click", function () {
+    status.innerText = "Not Read";
+  });
 
-    deleteButton.addEventListener("click", function (e) {
-        let target = e.target;
-        target.parentElement.parentElement.remove();
-    });
+  deleteButton.addEventListener("click", function (e) {
+    let target = e.target;
+    target.parentElement.parentElement.remove();
+  });
 
-    readBook.addEventListener("click",function(){
-        status.innerText="Read"
-    });
+  readBook.addEventListener("click", function () {
+    status.innerText = "Read";
+  });
 });
