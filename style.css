@@ -53,8 +53,8 @@ body {
   display: flex;
   justify-content: center;
 }
-.add-book,
-.read-book {
+#add-book,
+#read-book {
   background-color: #9fff9c;
   border-radius: 10px;
   font-size: 15px;
@@ -63,11 +63,11 @@ body {
   width: 200px;
   border: none;
 }
-.read-book:hover {
+#read-book:hover {
   background-color: rgb(142, 213, 142);
   color: #fff;
 }
-.add-book:hover {
+#add-book:hover {
   background-color: rgb(142, 213, 142);
   color: #fff;
 }
@@ -80,7 +80,8 @@ body {
   display: flex;
   flex-wrap: row wrap;
   margin-left: 270px;
-  padding: 100px;
+  padding: 50px;
+  box-sizing: border-box;
 }
 .book-container div {
   width: 100%;
@@ -97,7 +98,6 @@ body {
   border-radius: 10px;
   width: 200px;
   height: 200px;
-
   font-size: 1rem;
   box-sizing: border-box;
 }
