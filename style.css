@@ -53,19 +53,14 @@ body {
   display: flex;
   justify-content: center;
 }
-#add-book,
-#read-book {
+#add-book{
   background-color: #9fff9c;
   border-radius: 10px;
   font-size: 15px;
   padding: 10px;
   margin-right: 20px;
-  width: 200px;
+  width: 100px;
   border: none;
-}
-#read-book:hover {
-  background-color: rgb(142, 213, 142);
-  color: #fff;
 }
 #add-book:hover {
   background-color: rgb(142, 213, 142);
@@ -74,30 +69,73 @@ body {
 
 /* main contents */
 
-.book-container {
+#main-container {
   background-color: #ed4264;
-  height: 100vh;
-  display: flex;
-  flex-wrap: row wrap;
+  min-height: 100vh;
+  max-height: auto;
   margin-left: 270px;
   padding: 50px;
   box-sizing: border-box;
 }
-.book-container div {
-  width: 100%;
-  height: 10%;
+#main-container .heading{
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 50px;
+  color: white;
+}
+#books{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 /* book class created in js file*/
 
-.book {
+#main-container .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 200px;
   height: 200px;
   font-size: 1rem;
+  margin: 15px;
   box-sizing: border-box;
 }
+.book ul{
+  margin-bottom: 20px;
+}
+.book .button-js-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.delete-book,.status{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.status{
+  margin-right: 10px;
+  background-color: #9fff9c;
+  border: none;
+}
+.status:hover{
+  background-color: rgb(142, 213, 142);
+  color: #fff;
+}
+.delete-book{
+  width:50px;
+  color: red;
+  border-color: red;
+}
+.delete-book:hover{
+  background-color: red;
+  color: white;
+}
+
