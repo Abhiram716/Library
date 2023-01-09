@@ -1,80 +1,141 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background:url(janko-ferlic-sfL_QOnmy00-unsplash.jpg);
-    background-size: cover;
+@font-face {
+  font-family: "Ambery";
+  src: url(fonts/Ambery\ Garden.otf);
 }
-#add-book-container{
-    display: flex;
-    border:solid 2px #fff;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: #fff;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Ambery";
+  list-style: none;
+  /* overflow-y: hidden; */
 }
-.input{
-    display: flex;
-    flex-direction: column;
+body {
+  position: relative;
 }
-.input-book{
-    border-radius: 5px;
-    font-size: 20px;
-    width: 300px;
-    margin: 5px;
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 270px;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom right, #ed4264, #ffedbc);
+}
+.sidebar .sidebar-contents {
+  margin-top: 100px;
+}
+.sidebar .header {
+  font-size: 22px;
+  color: white;
+  width: 100vw;
+  height: 20vh;
+  margin-left: 50px;
+}
+.sidebar .input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.sidebar .input .input-book {
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
 }
 #add-book{
-    margin-left: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    width: 70px;
-    background-color: #fff;
-    border-color: rgb(8, 209, 8);
-    color: rgb(8, 209, 8);
-    
+  background-color: #9fff9c;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 10px;
+  margin-right: 20px;
+  width: 100px;
+  border: none;
 }
-#add-book:hover{
-    background-color: rgb(13, 174, 13);
-    color: #fff;
+#add-book:hover {
+  background-color: rgb(142, 213, 142);
+  color: #fff;
 }
-.book{
-    width:95%;
-    background-color: white;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-}
-.book li{
-    list-style: none;
-    padding: 10px;
-    margin:5px;
-    font-size: 1.3rem;
-    flex: 4;
-}
-.book button{
-    flex: 1;
-    border-radius: 10px;
-    margin:5px;
-    background-color: #fff;
-    cursor: pointer;
-}
-.book .checkBook{
-    color: orange;
-    border: solid 2px orange;
 
-}
-.book .checkBook:hover{
-    color: white;
-    background-color: orange;
-}
-.book .deleteBook{
-    color: red;
-    border: solid 2px red;
+/* main contents */
 
+#main-container {
+  background-color: #ed4264;
+  min-height: 100vh;
+  max-height: auto;
+  margin-left: 270px;
+  padding: 50px;
+  box-sizing: border-box;
 }
-.book .deleteBook:hover{
-    color: white;
-    background-color: red;
+#main-container .heading{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  color: white;
 }
+#books{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+/* book class created in js file*/
+
+#main-container .book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  font-size: 1rem;
+  margin: 15px;
+  box-sizing: border-box;
+}
+.book ul{
+  margin-bottom: 20px;
+}
+.book .button-js-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.delete-book,.status{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.status{
+  margin-right: 10px;
+  background-color: #9fff9c;
+  border: none;
+}
+.status:hover{
+  background-color: rgb(142, 213, 142);
+  color: #fff;
+}
+.delete-book{
+  width:50px;
+  color: red;
+  border-color: red;
+}
+.delete-book:hover{
+  background-color: red;
+  color: white;
+}
+
